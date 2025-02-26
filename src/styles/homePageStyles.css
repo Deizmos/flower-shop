@@ -1,0 +1,132 @@
+.homepage-container {
+    padding: 20px 0;
+}
+
+.carousel-container {
+    padding-bottom: 10px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.category-button {
+    margin-right: 10px;
+}
+
+.cart-button {
+    position: fixed;
+    display: flex;
+    min-width: 100px;
+    border-radius: 50px;
+    background-color: crimson;
+    justify-content: left;
+    padding: 12px 20px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+/* Контейнер для кнопок категорий */
+.category-container {
+    display: flex;
+    overflow-x: auto;        /* Горизонтальная прокрутка */
+    white-space: nowrap;     /* Элементы остаются в одной линии */
+    padding: 10px 0;         /* Добавляем отступы сверху и снизу */
+    position: sticky;        /* Закрепляем элемент при прокрутке */
+    top: 0;                  /* Прикрепляем к верхней части экрана */
+    z-index: 1000;           /* Устанавливаем высокий z-index, чтобы кнопки не скрывались под другими элементами */
+}
+
+/* Скрытие полосы прокрутки */
+.category-container::-webkit-scrollbar {
+    display: none; /* Отключаем видимость полосы прокрутки */
+}
+
+/* Стили для кнопок категорий */
+.category-button {
+    margin-right: 10px;      /* Отступ между кнопками */
+    white-space: nowrap;     /* Чтобы текст в кнопках не переносился на несколько строк */
+}
+
+.category-item {
+
+}
+
+.category-item-name {
+    margin-left: 10px;
+    margin-left: 10px;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+.cart-amount {
+    color: white;
+}
+
+.cart-total {
+    color: white;
+}
+
+.category-button.active {
+    background-color: crimson;  /* Цвет фона для активной кнопки */
+    color: white;  /* Цвет текста для активной кнопки */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel .slick-track {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-image {
+    width: 80%; /* Главный слайд будет занимать 80% ширины */
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Настроим соседние слайды, чтобы они были видны */
+.slick-slide {
+    display: flex !important;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Стили для соседних слайдов, которые будут чуть меньше */
+.slick-center .carousel-image {
+    transform: scale(1.1); /* Увеличиваем центральный слайд */
+}
+
+/* Для соседних слайдов */
+.slick-prev, .slick-next {
+    z-index: 1;
+    color: transparent;
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет кнопок навигации */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Стиль для стрелок при наведении */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}

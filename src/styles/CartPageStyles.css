@@ -1,0 +1,177 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+}
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+    margin-top: 16px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    margin: 0;
+}
+
+.cart-item-price {
+    margin: 0;
+    color: gray;
+}
+
+.cart-item-quantity {
+    margin: 0;
+}
+
+.cart-page-total {
+    margin-top: 20px;
+}
+
+.cart-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.arrow-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавное изменение фона */
+}
+
+.cart-page-title {
+    margin: 0;
+}
+
+/* Контейнер для кнопок */
+.cart-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Отступ сверху, чтобы кнопки были ниже заголовка */
+}
+
+/* Общие стили для кнопок */
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Стили для активной кнопки */
+.toggle-button.active {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.05); /* Плавное увеличение кнопки */
+}
+
+/* Стили для неактивных кнопок */
+.toggle-button:not(.active) {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Стили для текста в компоненте */
+.delivery-info {
+    width: 100%;
+    margin-top: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.delivery-component,
+.pickup-component {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.delivery-info .delivery-component.hidden,
+.delivery-info .pickup-component.hidden {
+    opacity: 0;
+    display: none;
+}
+
+
+.cart-total-amount {
+    position: absolute;
+    bottom: 10px;
+    width: 85%;
+    padding: 20px;
+    color: white;
+    background-color: #232222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 16px ;
+}
+
+.cart-promo {
+    width: 85%;
+    padding: 20px;
+    color: white;
+    background-color: #e7e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 16px
+}
+
+
+.cart-promo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 16px 30px;
+}
+
+.cart-promo input {
+    background-color: #e7e4e4;  /* Цвет фона инпута */
+    border: none;               /* Убираем бордер */
+    padding: 0;         /* Добавляем внутренние отступы для лучшего вида */
+    border-radius: 5px;         /* Немного скругляем углы */
+    width: 200px;               /* Можно настроить ширину инпута */
+}
+
+/* Убираем стили при фокусе, если нужно */
+.cart-promo input:focus {
+    outline: none;              /* Убираем стандартный outline при фокусе */
+}
+
+.promo-button {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #c5c3c3;
+}
