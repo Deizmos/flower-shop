@@ -22,7 +22,7 @@ const ProductCategory = ({ categoryName, products }) => {
     return (
         <div className="product-container">
             <h3>{categoryName}</h3>
-            <Row gutter={[16, 16]}>
+            <Row className="product-row" gutter={[16, 16]}>
                 {products.map((product) => (
                     <Col key={product.id} xs={12} sm={12} md={12} lg={12}>
                         <Link to={`/product/${product.id}`}>

@@ -37,3 +37,6 @@
     max-width: 80px;
     margin-top: 6px;
 }
+.product-row {
+    width: calc(100% + 12px);
+}
