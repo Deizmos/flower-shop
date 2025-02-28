@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     width: 100%;
     font-family: 'Golos', sans-serif;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 @font-face {
     font-family: 'Golos';
