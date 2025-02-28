@@ -1,10 +1,8 @@
 import React from "react";
-import { Card, Row, Col, Button } from "antd";
+import {  Row, Col } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/cartSlice";
-
-import carouselImage1 from "../assets/carousel-image.jpg";
 
 import "../styles/ProductCategoryStyles.css";
 

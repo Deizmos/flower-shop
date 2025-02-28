@@ -3,8 +3,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    items: [], // Список товаров в корзине
-    totalAmount: 0, // Итоговая сумма
+    items: [],
+    totalAmount: 0,
 };
 
 const cartSlice = createSlice({
@@ -16,12 +16,12 @@ const cartSlice = createSlice({
             const existingItem = state.items.find(item => item.id === id);
 
             if (existingItem) {
-                existingItem.quantity += quantity; // Увеличиваем количество товара в корзине
+                existingItem.quantity += quantity;
             } else {
                 state.items.push({ id, name, price, quantity, image });
             }
 
-            state.totalAmount += price * quantity; // Обновляем общую сумму
+            state.totalAmount += price * quantity;
         },
         removeFromCart: (state, action) => {
             const id = action.payload;

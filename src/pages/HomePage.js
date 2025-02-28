@@ -1,13 +1,9 @@
 import React, { useState, useRef } from "react";
 import { useSelector } from "react-redux";
-import { Carousel, Typography, Button, Row, Col } from "antd";
+import { Button } from "antd";
 import ProductCategory from "../components/ProductCategory";
 import { Link } from "react-router-dom";
 import { ShoppingCartOutlined } from "@ant-design/icons";
-
-import Image15 from "../assets/15.jpeg";
-import Image16 from "../assets/16.jpeg";
-import Image17 from "../assets/17.jpeg";
 
 
 import "../styles/homePageStyles.css";

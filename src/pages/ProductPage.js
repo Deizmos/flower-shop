@@ -52,7 +52,7 @@ const ProductPage = () => {
         message.success(`${quantity} ${product.name} добавлено в корзину`);
     };
     const goBack = () => {
-        navigate("/"); // Перенаправляем на главную страницу
+        navigate("/");
     };
 
     // Функции для изменения количества

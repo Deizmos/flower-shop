@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {Button, Typography, List, message} from "antd";
+import {Button, Typography,  message} from "antd";
 import { removeFromCart, clearCart } from "../store/cartSlice";
-import { Link, useNavigate } from "react-router-dom";
-import {BorderInnerOutlined, LeftOutlined} from "@ant-design/icons";
+import {  useNavigate } from "react-router-dom";
+import { LeftOutlined} from "@ant-design/icons";
 import "../styles/CartPageStyles.css";
 import RecommendedItems from "../components/RecommendedItems";
 
@@ -25,7 +25,7 @@ const CartPage = () => {
     const cartItems = useSelector((state) => state.cart.items);
     const totalAmount = useSelector((state) => state.cart.totalAmount);
     const navigate = useNavigate();
-    const [isDelivery, setIsDelivery] = useState(true); // Состояние для выбора между доставкой и самовывозом
+    const [isDelivery, setIsDelivery] = useState(true);
 
     const handlerCart = () => {
         success()
@@ -35,10 +35,9 @@ const CartPage = () => {
         }, 2000)
     }
     const goBack = () => {
-        navigate("/"); // Перенаправляем на главную страницу
+        navigate("/");
     };
 
-    // Функция для обработки изменения состояния
     const handleDeliveryClick = () => {
         setIsDelivery(true);
     };
@@ -59,7 +58,6 @@ const CartPage = () => {
             />
             <Title className="cart-page-title" level={2}>Корзина</Title>
 
-            {/* Кнопки для переключения между доставкой и самовывозом */}
             <div className="cart-button-container">
                 <Button
                     className={`toggle-button ${isDelivery ? "active" : ""} left`}
@@ -75,7 +73,6 @@ const CartPage = () => {
                 </Button>
             </div>
 
-            {/* Компонент, который отображается в зависимости от выбора */}
             <div className="delivery-info">
                 {isDelivery ? (
                     <div className="delivery-component">
