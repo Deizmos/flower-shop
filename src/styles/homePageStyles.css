@@ -22,20 +22,20 @@
     right: 20px;
     z-index: 1000;
 }
-/* Контейнер для кнопок категорий */
+
 .category-container {
     display: flex;
-    overflow-x: auto;        /* Горизонтальная прокрутка */
-    white-space: nowrap;     /* Элементы остаются в одной линии */
-    padding: 10px 0;         /* Добавляем отступы сверху и снизу */
-    position: sticky;        /* Закрепляем элемент при прокрутке */
-    top: 0;                  /* Прикрепляем к верхней части экрана */
-    z-index: 1000;           /* Устанавливаем высокий z-index, чтобы кнопки не скрывались под другими элементами */
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Скрытие полосы прокрутки */
+
 .category-container::-webkit-scrollbar {
-    display: none; /* Отключаем видимость полосы прокрутки */
+    display: none;
 }
 
 /* Стили для кнопок категорий */
@@ -119,4 +119,8 @@
 
 .slick-next {
     right: 10px;
+}
+
+.homepage-centar-container {
+ position: relative;
 }

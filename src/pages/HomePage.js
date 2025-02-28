@@ -73,7 +73,7 @@ const HomePage = () => {
                     </div>
                 </Carousel>
             </div>
-
+            <div className="homepage-centar-container">
             <div className="category-container">
                 {categories.map((category) => (
                     <Button
@@ -102,7 +102,7 @@ const HomePage = () => {
             <div ref={chrysanthemumRef}>
                 <ProductCategory categoryName="Хризантемы" products={groupedProducts["Хризантемы"]} />
             </div>
-
+            </div>
             {cartItems.length > 0 && (
                 <Link to="/cart">
                     <div className="cart-button">

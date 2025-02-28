@@ -2,11 +2,13 @@ import React, {useEffect, useState} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Typography, Button, InputNumber, message } from "antd";
-import {LeftOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
+import {LeftOutlined} from "@ant-design/icons";
+
 import { addToCart } from "../store/cartSlice";
-import carouselImage1 from "../assets/carousel-image.jpg";
-import "../styles/productPageStyles.css";
+
 import RecommendedItems from "../components/RecommendedItems";
+
+import "../styles/productPageStyles.css";
 
 const { Title, Paragraph } = Typography;
 

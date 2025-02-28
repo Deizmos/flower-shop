@@ -17,7 +17,6 @@ const CartPage = () => {
     const cartItems = useSelector((state) => state.cart.items);
     const totalAmount = useSelector((state) => state.cart.totalAmount);
     const navigate = useNavigate();
-    console.log("cartItems",cartItems)
     const [isDelivery, setIsDelivery] = useState(true); // Состояние для выбора между доставкой и самовывозом
 
     const goBack = () => {
