@@ -99,7 +99,7 @@ const CartPage = () => {
                                 <img src={item.image} alt={item.name}/>
                                 <div className="cart-item-details">
                                     <Title level={5} className="cart-item-name">{item.name}</Title>
-                                    <p className="cart-item-price">{item.price}₽</p>
+                                    <p className="cart-item-price">{item.price}сум</p>
                                     <p className="cart-item-quantity">Количество: {item.quantity}</p>
                                 </div>
                                 <Button danger onClick={() => dispatch(removeFromCart(item.id))}>
@@ -113,7 +113,7 @@ const CartPage = () => {
                         <div className='promo-button'>Применить</div>
                     </div>
                     <RecommendedItems/>
-                    <div className="cart-total-amount" onClick={handlerCart}> Оформить заказ: {totalAmount} р</div>
+                    <div className="cart-total-amount" onClick={handlerCart}> Оформить заказ: {totalAmount} сум</div>
                 </>
             ) : (
                 <Title level={4}>Корзина пуста</Title>

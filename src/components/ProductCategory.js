@@ -27,7 +27,7 @@ const ProductCategory = ({ categoryName, products }) => {
                         <div>
                             <img className="product-img" alt={product.name} src={product.image} />
                             <p className="product-name">{product.name}</p>
-                            <p className="product-price">{product.price} ₽ </p>
+                            <p className="product-price">{product.price} сум </p>
                         </div>
                         </Link>
                     </Col>

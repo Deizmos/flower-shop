@@ -51,7 +51,7 @@ const RecommendedItems = () => {
                                 <p className="recommended-name">{item.name}</p>
                                 <p className="recommended-description">{item.description}</p>
                             </div>
-                            <p className="recommended-price">{item.price}₽</p>
+                            <p className="recommended-price">{item.price}сум</p>
                         </div>
                     </div>
                 ))}

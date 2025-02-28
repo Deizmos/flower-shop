@@ -7,7 +7,7 @@
 }
 
 .category-button {
-    margin-right: 10px;
+    margin-left: 6px;
 }
 
 .cart-button {
@@ -24,13 +24,18 @@
 }
 
 .category-container {
+    width: 100vw;
+    height: 46px;
     display: flex;
+    align-items: center;
     overflow-x: auto;
     white-space: nowrap;
     /*padding: 10px 0;*/
     position: sticky;
     top: 10px;
     z-index: 1000;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -63,9 +68,11 @@
     color: white;
 }
 
-.category-button.active {
-    background-color: #d62729;  /* Цвет фона для активной кнопки */
-    color: white;  /* Цвет текста для активной кнопки */
+.category-button:focus,
+.category-button:active {
+    background-color: #d62729 !important;
+    color: white !important;
+    border-color: #d62729 !important;
 }
 
 .carousel-container {

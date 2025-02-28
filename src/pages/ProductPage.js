@@ -75,7 +75,7 @@ const ProductPage = () => {
             <img className="product-page-img" alt={product.name} src={product.image}/>
             <Title className="product-page-title" level={3}>{product.name}</Title>
             <Paragraph className="product-page-description">{product.description}</Paragraph>
-            <Title className="product-page-price" level={4}>{product.price}₽</Title>
+            <Title className="product-page-price" level={4}>{product.price}сум</Title>
             <RecommendedItems/>
             <div className="button-container">
                 <div className="quantity-selector">
@@ -112,7 +112,7 @@ const ProductPage = () => {
                             size="large"
                             className="add-to-cart-button"
                         >
-                            Добавить в корзину ({quantity * product.price}₽)
+                            Добавить в корзину ({quantity * product.price}сум)
                         </Button>
                     </Link>
                 </div>
