@@ -57,22 +57,22 @@ const HomePage = () => {
 
     return (
         <div className="homepage-container">
-            <div className="carousel-container">
-                <Carousel
-                    autoplay
-                    infinite
-                >
-                    <div>
-                        <img src={Image15} alt="Slide 1" className="carousel-image" />
-                    </div>
-                    <div>
-                        <img src={Image16} alt="Slide 2" className="carousel-image" />
-                    </div>
-                    <div>
-                        <img src={Image17} alt="Slide 3" className="carousel-image" />
-                    </div>
-                </Carousel>
-            </div>
+            {/*<div className="carousel-container">*/}
+            {/*    <Carousel*/}
+            {/*        autoplay*/}
+            {/*        infinite*/}
+            {/*    >*/}
+            {/*        <div>*/}
+            {/*            <img src={Image15} alt="Slide 1" className="carousel-image" />*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            <img src={Image16} alt="Slide 2" className="carousel-image" />*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            <img src={Image17} alt="Slide 3" className="carousel-image" />*/}
+            {/*        </div>*/}
+            {/*    </Carousel>*/}
+            {/*</div>*/}
             <div className="homepage-centar-container">
             <div className="category-container">
                 {categories.map((category) => (

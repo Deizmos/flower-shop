@@ -24,10 +24,13 @@
     transition: background 0.2s ease-in-out;
     background-color: #f6f6f6;
     padding: 12px 20px 12px 12px;
+    border:1px solid #f6f6f6;;
 }
 
+.recommended-item:active,
+.recommended-item:focus,
 .recommended-item:focus {
-    border:1px solid green;
+    border:1px solid #c9c8c8;;
 }
 
 .recommended-image {
