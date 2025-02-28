@@ -25,13 +25,15 @@
 
 /* Кнопка */
 .add-to-cart-button {
+    height: 100%;
+    width: 100% ;
+    background: #474A51;
     font-size: 16px;
 }
 
 /* Стили для страницы товара */
 .product-page {
-    width: 100%;
-    background-color: #eae8e8;
+    width: calc(100% - 12px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,22 +47,24 @@
 }
 
 .add-to-cart-container {
-    margin-top: auto; /* Это прижмёт кнопку к низу */
+    width: calc(100% - 100px);
+    height: 100%;
 }
 .button-container {
-    width: 100%;
+    width: calc(100% - 24px);
+    height: 50px;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 12px;
+    left: 6px;
     display: flex;
     justify-content: space-between;
 }
 
 .product-page-img {
-    width: calc(100% - 6px);
+    width: 100%;
     height: auto;
     border-radius: 20px;
-    margin: 6px 12px;
+    margin: 12px 0;
 }
 
 .product-page-title {
@@ -75,3 +79,41 @@
 .product-page-price {
     margin: 0 !important;
 }
+
+.quantity-button {
+    font-size: 24px;
+    background-color: inherit;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 12px;
+}
+
+.quantity-button:disabled {
+    cursor: not-allowed;
+}
+
+.quantity-selector {
+    width: 100px;
+    background-color: #DCDCDC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Стили для кастомизации InputNumber */
+.custom-input-number {
+    border: none;               /* Убираем рамку */
+    background-color: transparent; /* Убираем фон */
+    width: auto;                /* Автоматическая ширина для поля */
+    text-align: center;         /* Выравнивание числа по центру */
+    font-size: 16px;            /* Размер шрифта, можно настроить по своему */
+    outline: none;              /* Убираем обводку при фокусе */
+}
+
+/* Для состояния фокуса, чтобы не было обводки */
+.custom-input-number:focus {
+    box-shadow: none;           /* Убираем тень при фокусе */
+}
+

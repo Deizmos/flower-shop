@@ -6,12 +6,6 @@
     padding-bottom: 10px;
 }
 
-.carousel-image {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
 .category-button {
     margin-right: 10px;
 }
@@ -50,12 +44,8 @@
     white-space: nowrap;     /* Чтобы текст в кнопках не переносился на несколько строк */
 }
 
-.category-item {
-
-}
 
 .category-item-name {
-    margin-left: 10px;
     margin-left: 10px;
 }
 
@@ -90,7 +80,8 @@
 }
 
 .carousel-image {
-    width: 80%; /* Главный слайд будет занимать 80% ширины */
+    width: calc(100vw - 12px) ; /* Главный слайд будет занимать 80% ширины */
+    margin-left: -12px;
     transition: transform 0.3s ease;
     object-fit: cover;
     border-radius: 10px;

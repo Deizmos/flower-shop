@@ -1,7 +1,9 @@
 body {
+    padding: 0 6px;
     background-color: #fff;
     margin: 0;
     width: 100%;
+    font-family: 'Golos', sans-serif;
 }
 @font-face {
     font-family: 'Golos';

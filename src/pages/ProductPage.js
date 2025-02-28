@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Typography, Button, InputNumber, message } from "antd";
+import {LeftOutlined, MinusOutlined, PlusOutlined} from "@ant-design/icons";
 import { addToCart } from "../store/cartSlice";
 import carouselImage1 from "../assets/carousel-image.jpg";
 import "../styles/productPageStyles.css";
@@ -12,6 +13,7 @@ const { Title, Paragraph } = Typography;
 const ProductPage = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const product = useSelector((state) =>
         state.products.products.find((item) => item.id === Number(id))
     );
@@ -28,14 +30,12 @@ const ProductPage = () => {
             return;
         }
 
-        // Проверка, чтобы количество не превышало доступное в наличии
         if (quantity > product.quantity) {
             message.warning(`В наличии только ${product.quantity} шт.`);
-            setQuantity(product.quantity); // Ограничиваем максимальное количество
+            setQuantity(product.quantity);
             return;
         }
 
-        // Отправка данных в корзину
         dispatch(addToCart({
             id: product.id,
             name: product.name,
@@ -43,12 +43,29 @@ const ProductPage = () => {
             quantity
         }));
 
-        // Уведомление
         message.success(`${quantity} ${product.name} добавлено в корзину`);
+    };
+    const goBack = () => {
+        navigate("/"); // Перенаправляем на главную страницу
+    };
+
+    // Функции для изменения количества
+    const increaseQuantity = () => {
+        setQuantity((prev) => Math.min(prev + 1, product.quantity));
+    };
+
+    const decreaseQuantity = () => {
+        setQuantity((prev) => Math.max(prev - 1, 1));
     };
 
     return (
         <div className="product-page">
+            <Button
+                className="arrow-back"
+                icon={<LeftOutlined />}
+                onClick={goBack}
+                type="text"
+            />
             <img className="product-page-img" alt={product.name} src={carouselImage1}/>
             <Title className="product-page-title" level={3}>{product.name}</Title>
             <Paragraph className="product-page-description">{product.description}</Paragraph>
@@ -56,13 +73,31 @@ const ProductPage = () => {
             <RecommendedItems/>
             <div className="button-container">
                 <div className="quantity-selector">
+                    <button
+                        className="quantity-button"
+                        onClick={decreaseQuantity}
+                        disabled={quantity <= 1}
+                    >
+                        –
+                    </button>
+
                     <InputNumber
                         min={1}
                         max={product.quantity}
                         value={quantity}
                         onChange={setQuantity}
+                        className="custom-input-number"
                     />
+
+                    <button
+                        className="quantity-button"
+                        onClick={increaseQuantity}
+                        disabled={quantity >= product.quantity}
+                    >
+                        +
+                    </button>
                 </div>
+
                 <div className="add-to-cart-container">
                     <Link to="/">
                         <Button

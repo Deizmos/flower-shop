@@ -59,14 +59,7 @@ const HomePage = () => {
             <div className="carousel-container">
                 <Carousel
                     // autoplay
-                    centerMode
                     infinite
-                    slidesToShow={1}
-                    focusOnSelect
-                    centerPadding="20%"
-                    arrows={true}
-                    prevArrow={<div className="slick-prev" />}
-                    nextArrow={<div className="slick-next" />}
                 >
                     <div>
                         <img src={carouselImage1} alt="Slide 1" className="carousel-image" />

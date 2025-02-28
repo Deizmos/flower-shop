@@ -5,6 +5,7 @@ import { removeFromCart, clearCart } from "../store/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
 import {BorderInnerOutlined, LeftOutlined} from "@ant-design/icons";
 import "../styles/CartPageStyles.css";
+import RecommendedItems from "../components/RecommendedItems";
 
 const { Title } = Typography;
 
@@ -42,13 +43,13 @@ const CartPage = () => {
             {/* Кнопки для переключения между доставкой и самовывозом */}
             <div className="cart-button-container">
                 <Button
-                    className={`toggle-button ${isDelivery ? "active" : ""}`}
+                    className={`toggle-button ${isDelivery ? "active" : ""} left`}
                     onClick={handleDeliveryClick}
                 >
                     Доставка
                 </Button>
                 <Button
-                    className={`toggle-button ${!isDelivery ? "active" : ""}`}
+                    className={`toggle-button ${!isDelivery ? "active" : ""} right`}
                     onClick={handlePickupClick}
                 >
                     Самовывоз
@@ -92,6 +93,7 @@ const CartPage = () => {
                         <input type="text" placeholder="Введите промокод"/>
                         <div className='promo-button'>Применить</div>
                     </div>
+                    <RecommendedItems/>
                     <div className="cart-total-amount"> Оформить заказ: {totalAmount} р</div>
                 </>
             ) : (

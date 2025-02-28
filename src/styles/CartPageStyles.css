@@ -1,4 +1,5 @@
 .cart-container {
+    width: calc(100vw - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,7 +78,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 10px;
     margin-top: 20px; /* Отступ сверху, чтобы кнопки были ниже заголовка */
 }
 
@@ -93,7 +93,6 @@
 .toggle-button.active {
     background-color: #4caf50;
     color: white;
-    transform: scale(1.05); /* Плавное увеличение кнопки */
 }
 
 /* Стили для неактивных кнопок */
@@ -101,11 +100,20 @@
     background-color: #f0f0f0;
     color: #333;
 }
+.left {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height: 60px;
+}
 
-/* Стили для текста в компоненте */
+.right {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 60px;
+}
+
 .delivery-info {
     width: 100%;
-    margin-top: 20px;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -123,7 +131,7 @@
 
 
 .cart-total-amount {
-    position: absolute;
+    position: sticky;
     bottom: 10px;
     width: 85%;
     padding: 20px;
@@ -145,7 +153,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    margin: 16px
+    margin: 16px 16px 0 16px;
 }
 
 

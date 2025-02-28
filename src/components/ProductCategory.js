@@ -20,7 +20,7 @@ const ProductCategory = ({ categoryName, products }) => {
     };
 
     return (
-        <div style={{ marginBottom: "20px" }}>
+        <div className="product-container">
             <h3>{categoryName}</h3>
             <Row gutter={[16, 16]}>
                 {products.map((product) => (

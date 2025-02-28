@@ -30,11 +30,11 @@ const initialState = {
         { id: 21, name: "Красная лента", price: 200, description: "Яркая красная лента для упаковки", quantity: 50, image: redRoses },
         { id: 22, name: "Зеленая лента", price: 180, description: "Стильная зеленая лента", quantity: 30, image: redRoses },
         { id: 23, name: "Подарочная упаковка", price: 350, description: "Роскошная подарочная упаковка", quantity: 20, image: redRoses },
-        { id: 24, name: "Мешок для подарков", price: 220, description: "Элегантный мешок для подарков", quantity: 15, image: redRoses },
-        { id: 25, name: "Голубая лента", price: 190, description: "Нежная голубая лента", quantity: 40, image: redRoses },
-        { id: 26, name: "Прозрачная упаковка", price: 300, description: "Прозрачная упаковка для букетов", quantity: 25, image: redRoses },
-        { id: 27, name: "Бежевый мешок для подарков", price: 230, description: "Нежный бежевый мешок", quantity: 12, image: redRoses },
-        { id: 28, name: "Серебристая лента", price: 210, description: "Элегантная серебристая лента", quantity: 30, image: redRoses },
+        // { id: 24, name: "Мешок для подарков", price: 220, description: "Элегантный мешок для подарков", quantity: 15, image: redRoses },
+        // { id: 25, name: "Голубая лента", price: 190, description: "Нежная голубая лента", quantity: 40, image: redRoses },
+        // { id: 26, name: "Прозрачная упаковка", price: 300, description: "Прозрачная упаковка для букетов", quantity: 25, image: redRoses },
+        // { id: 27, name: "Бежевый мешок ", price: 230, description: "Нежный бежевый мешок", quantity: 12, image: redRoses },
+        // { id: 28, name: "Серебристая лента", price: 210, description: "Элегантная серебристая лента", quantity: 30, image: redRoses },
     ],
 };
 
