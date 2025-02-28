@@ -89,7 +89,6 @@
     transition: all 0.3s ease;
 }
 
-/* Стили для активной кнопки */
 .toggle-button.active {
     background-color: #cccccc !important;
     border-color: #d9d9d9 !important;
@@ -98,12 +97,11 @@
 
 .toggle-button:focus,
 .toggle-button:active {
-    outline: none;         /* Убираем обводку при фокусе */
-    box-shadow: none;      /* Убираем тень при фокусе */
-    background-color: #f0f0f0; /* Сохраняем исходный фон */
+    outline: none;
+    box-shadow: none;
+    background-color: #f0f0f0;
 }
 
-/* Стили для неактивных кнопок */
 .toggle-button:not(.active) {
     background-color: #f6f6f6;
     color: #333;
@@ -174,16 +172,15 @@
 }
 
 .cart-promo input {
-    background-color: #f6f6f6;  /* Цвет фона инпута */
-    border: none;               /* Убираем бордер */
-    padding: 0;         /* Добавляем внутренние отступы для лучшего вида */
-    border-radius: 5px;         /* Немного скругляем углы */
-    width: 200px;               /* Можно настроить ширину инпута */
+    background-color: #f6f6f6;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    width: 200px;
 }
 
-/* Убираем стили при фокусе, если нужно */
 .cart-promo input:focus {
-    outline: none;              /* Убираем стандартный outline при фокусе */
+    outline: none;
 }
 
 .promo-button {
@@ -199,6 +196,3 @@
     justify-content: space-between;
 }
 
-.cart-total-item {
-
-}
