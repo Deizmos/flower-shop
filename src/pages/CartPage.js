@@ -116,6 +116,7 @@ const CartPage = () => {
                     <div className="cart-total-amount" onClick={handlerCart}> Оформить заказ: {totalAmount} сум</div>
                 </>
             ) : (
+
                 <Title level={4}>Корзина пуста</Title>
             )}
         </div>
