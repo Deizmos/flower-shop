@@ -20,7 +20,9 @@ import Image17 from "../assets/17.jpeg";
 import Image18 from "../assets/18.jpeg";
 import Image19 from "../assets/19.jpeg";
 import Image20 from "../assets/20.jpeg";
-import redRoses from "../assets/Лилии.jpg";
+import Tape1 from "../assets/Лента1.jpg";
+import Tape2 from "../assets/Лента2.jpg";
+import Tape3 from "../assets/Лента3.jpg";
 
 const initialState = {
     categories: ["Розы", "Календула", "Лилии", "Тюльпаны", "Хризантемы"],
@@ -47,9 +49,9 @@ const initialState = {
         { id: 20, name: "Желтые хризантемы", category: "Хризантемы", price: 1380, description: "Солнечные желтые хризантемы", quantity: 9, image: Image20 },
     ],
     additionalItems: [
-        { id: 21, name: "Красная лента", price: 200, description: "Яркая красная лента для упаковки", quantity: 50, image: redRoses },
-        { id: 22, name: "Зеленая лента", price: 180, description: "Стильная зеленая лента", quantity: 30, image: redRoses },
-        { id: 23, name: "Подарочная упаковка", price: 350, description: "Роскошная подарочная упаковка", quantity: 20, image: redRoses },
+        { id: 21, name: "Красная лента", price: 200, description: "Яркая красная лента для упаковки", quantity: 50, image: Tape1 },
+        { id: 22, name: "Зеленая лента", price: 180, description: "Стильная зеленая лента", quantity: 30, image: Tape2 },
+        { id: 23, name: "Подарочная упаковка", price: 350, description: "Роскошная подарочная упаковка", quantity: 20, image: Tape3 },
         // { id: 24, name: "Мешок для подарков", price: 220, description: "Элегантный мешок для подарков", quantity: 15, image: redRoses },
         // { id: 25, name: "Голубая лента", price: 190, description: "Нежная голубая лента", quantity: 40, image: redRoses },
         // { id: 26, name: "Прозрачная упаковка", price: 300, description: "Прозрачная упаковка для букетов", quantity: 25, image: redRoses },

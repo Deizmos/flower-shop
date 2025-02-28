@@ -5,9 +5,10 @@ import ProductCategory from "../components/ProductCategory";
 import { Link } from "react-router-dom";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 
-import carouselImage1 from "../assets/carousel-image.jpg";
-import carouselImage2 from "../assets/carousel-image2.jpg";
-import carouselImage3 from "../assets/carousel-image3.jpeg";
+import Image15 from "../assets/15.jpeg";
+import Image16 from "../assets/16.jpeg";
+import Image17 from "../assets/17.jpeg";
+
 
 import "../styles/homePageStyles.css";
 
@@ -58,17 +59,17 @@ const HomePage = () => {
         <div className="homepage-container">
             <div className="carousel-container">
                 <Carousel
-                    // autoplay
+                    autoplay
                     infinite
                 >
                     <div>
-                        <img src={carouselImage1} alt="Slide 1" className="carousel-image" />
+                        <img src={Image15} alt="Slide 1" className="carousel-image" />
                     </div>
                     <div>
-                        <img src={carouselImage2} alt="Slide 2" className="carousel-image" />
+                        <img src={Image16} alt="Slide 2" className="carousel-image" />
                     </div>
                     <div>
-                        <img src={carouselImage3} alt="Slide 3" className="carousel-image" />
+                        <img src={Image17} alt="Slide 3" className="carousel-image" />
                     </div>
                 </Carousel>
             </div>
