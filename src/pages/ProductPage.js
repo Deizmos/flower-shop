@@ -11,6 +11,7 @@ import RecommendedItems from "../components/RecommendedItems";
 const { Title, Paragraph } = Typography;
 
 const ProductPage = () => {
+    window.scrollTo(0, 0);
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
