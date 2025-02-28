@@ -40,6 +40,7 @@ const ProductPage = () => {
             id: product.id,
             name: product.name,
             price: product.price,
+            image: product.image,
             quantity
         }));
 
@@ -66,7 +67,7 @@ const ProductPage = () => {
                 onClick={goBack}
                 type="text"
             />
-            <img className="product-page-img" alt={product.name} src={carouselImage1}/>
+            <img className="product-page-img" alt={product.name} src={product.image}/>
             <Title className="product-page-title" level={3}>{product.name}</Title>
             <Paragraph className="product-page-description">{product.description}</Paragraph>
             <Title className="product-page-price" level={4}>{product.price}₽</Title>
