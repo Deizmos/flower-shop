@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Typography, Button, InputNumber, message } from "antd";
@@ -11,7 +11,9 @@ import RecommendedItems from "../components/RecommendedItems";
 const { Title, Paragraph } = Typography;
 
 const ProductPage = () => {
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();

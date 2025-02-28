@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Button, Typography, List } from "antd";
 import { removeFromCart, clearCart } from "../store/cartSlice";
@@ -10,7 +10,9 @@ import RecommendedItems from "../components/RecommendedItems";
 const { Title } = Typography;
 
 const CartPage = () => {
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items);
     const totalAmount = useSelector((state) => state.cart.totalAmount);
