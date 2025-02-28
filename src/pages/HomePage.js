@@ -107,7 +107,7 @@ const HomePage = () => {
                     <div className="cart-button">
                         <ShoppingCartOutlined className="cart-icon" />
                         <div>
-                            <div className="cart-amount">{totalAmount}₽</div>
+                            <div className="cart-amount">{totalAmount} ₽</div>
                             <div className="cart-total">{totalItems} товар</div>
                         </div>
                     </div>

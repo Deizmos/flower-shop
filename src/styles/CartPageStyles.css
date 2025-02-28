@@ -91,13 +91,20 @@
 
 /* Стили для активной кнопки */
 .toggle-button.active {
-    background-color: #4caf50;
+    background-color: #cccccc;
     color: white;
+}
+
+.toggle-button:focus,
+.toggle-button:active {
+    outline: none;         /* Убираем обводку при фокусе */
+    box-shadow: none;      /* Убираем тень при фокусе */
+    background-color: #f0f0f0; /* Сохраняем исходный фон */
 }
 
 /* Стили для неактивных кнопок */
 .toggle-button:not(.active) {
-    background-color: #f0f0f0;
+    background-color: #f6f6f6;
     color: #333;
 }
 .left {
@@ -136,7 +143,7 @@
     width: 85%;
     padding: 20px;
     color: white;
-    background-color: #232222;
+    background-color: #262626;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +155,7 @@
     width: 85%;
     padding: 20px;
     color: white;
-    background-color: #e7e4e4;
+    background-color: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,7 +173,7 @@
 }
 
 .cart-promo input {
-    background-color: #e7e4e4;  /* Цвет фона инпута */
+    background-color: #f6f6f6;  /* Цвет фона инпута */
     border: none;               /* Убираем бордер */
     padding: 0;         /* Добавляем внутренние отступы для лучшего вида */
     border-radius: 5px;         /* Немного скругляем углы */
@@ -181,5 +188,5 @@
 .promo-button {
     padding: 10px;
     border-radius: 50px;
-    background-color: #c5c3c3;
+    background-color: #cccccc;
 }

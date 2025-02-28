@@ -64,7 +64,7 @@
 }
 
 .category-button.active {
-    background-color: crimson;  /* Цвет фона для активной кнопки */
+    background-color: #d62729;  /* Цвет фона для активной кнопки */
     color: white;  /* Цвет текста для активной кнопки */
 }
 
