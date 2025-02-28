@@ -1,5 +1,5 @@
 .homepage-container {
-    padding: 20px 0;
+    padding: 20px 6px;
 }
 
 .carousel-container {
@@ -80,8 +80,7 @@
 }
 
 .carousel-image {
-    width: calc(100vw - 12px) ; /* Главный слайд будет занимать 80% ширины */
-    margin-left: -12px;
+    width: calc(100vw - 12px) ;
     transition: transform 0.3s ease;
     object-fit: cover;
     border-radius: 10px;

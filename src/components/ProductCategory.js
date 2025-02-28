@@ -27,7 +27,7 @@ const ProductCategory = ({ categoryName, products }) => {
                     <Col key={product.id} xs={12} sm={12} md={12} lg={12}>
                         <Link to={`/product/${product.id}`}>
                         <div>
-                            <img className="product-img" alt={product.name} src={carouselImage1}/>
+                            <img className="product-img" alt={product.name} src={product.image} />
                             <p className="product-name">{product.name}</p>
                             <p className="product-price">{product.price} ₽ </p>
                         </div>

@@ -71,9 +71,12 @@ const CartPage = () => {
 
             {cartItems.length > 0 ? (
                 <>
-                    <Button type="primary" danger onClick={() => dispatch(clearCart())}>
-                        Очистить корзину
-                    </Button>
+                    <div className="cart-head" >
+                        <p className="cart-total-item" >В корзине: </p>
+                        <Button type="primary" danger onClick={() => dispatch(clearCart())}>
+                            Очистить корзину
+                        </Button>
+                    </div>
                     <div className="cart-items-container">
                         {cartItems.map((item) => (
                             <div className="cart-item" key={item.id}>
