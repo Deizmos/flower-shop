@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Button, Typography, List } from "antd";
+import {Button, Typography, List, message} from "antd";
 import { removeFromCart, clearCart } from "../store/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
 import {BorderInnerOutlined, LeftOutlined} from "@ant-design/icons";
@@ -13,12 +13,27 @@ const CartPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+    const [messageApi, contextHolder] = message.useMessage();
+    const success = () => {
+        messageApi.open({
+            type: 'success',
+            content: `Заказ оформлен`,
+            duration: 2,
+        });
+    };
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items);
     const totalAmount = useSelector((state) => state.cart.totalAmount);
     const navigate = useNavigate();
     const [isDelivery, setIsDelivery] = useState(true); // Состояние для выбора между доставкой и самовывозом
 
+    const handlerCart = () => {
+        success()
+        setTimeout(() => {
+            navigate("/")
+            dispatch(clearCart())
+        }, 2000)
+    }
     const goBack = () => {
         navigate("/"); // Перенаправляем на главную страницу
     };
@@ -33,6 +48,8 @@ const CartPage = () => {
     };
 
     return (
+        <>
+            {contextHolder}
         <div className="cart-container">
             <Button
                 className="arrow-back"
@@ -99,12 +116,13 @@ const CartPage = () => {
                         <div className='promo-button'>Применить</div>
                     </div>
                     <RecommendedItems/>
-                    <div className="cart-total-amount"> Оформить заказ: {totalAmount} р</div>
+                    <div className="cart-total-amount" onClick={handlerCart}> Оформить заказ: {totalAmount} р</div>
                 </>
             ) : (
                 <Title level={4}>Корзина пуста</Title>
             )}
         </div>
+        </>
     );
 };
 

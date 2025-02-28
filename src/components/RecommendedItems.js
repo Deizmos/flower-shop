@@ -2,12 +2,22 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../store/cartSlice";
 import "../styles/RecommendedItems.css";
+import {message} from "antd";
 
 const RecommendedItems = () => {
     const additionalItems = useSelector((state) => state.products.additionalItems);
     const dispatch = useDispatch();
+    const [messageApi, contextHolder] = message.useMessage();
+    const success = (item) => {
+        messageApi.open({
+            type: 'success',
+            content: `Товар ${item.name} добавлен в карзину`,
+            duration: 2,
+        });
+    };
 
     const handleAddToCart = (item) => {
+        success(item)
         dispatch(
             addToCart({
                 id: item.id,
@@ -20,6 +30,8 @@ const RecommendedItems = () => {
     };
 
     return (
+        <>
+            {contextHolder}
         <div className="recommended-container">
             <h2 className="recommended-title">Может заинтересовать</h2>
             <div className="recommended-list">
@@ -45,6 +57,7 @@ const RecommendedItems = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
 
