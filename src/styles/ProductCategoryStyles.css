@@ -1,7 +1,10 @@
 .product-container {
-    width: calc(100vw - 12px);
+    width: calc(100vw - 24px);
     margin-bottom: 20px;
-    padding-left: 6px;
+    padding-left: 12px;
+}
+.product-title {
+    margin-top: 6px;
 }
 
 .product-img {

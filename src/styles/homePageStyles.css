@@ -43,10 +43,10 @@
     display: none;
 }
 
-/* Стили для кнопок категорий */
 .category-button {
-    margin-right: 10px;      /* Отступ между кнопками */
-    white-space: nowrap;     /* Чтобы текст в кнопках не переносился на несколько строк */
+    margin-right: 10px;
+    white-space: nowrap;
+    border-radius: 16px;
 }
 
 
