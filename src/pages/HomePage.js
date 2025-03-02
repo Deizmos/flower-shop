@@ -25,6 +25,8 @@ const HomePage = () => {
         "Хризантемы": useRef(null),
     };
 
+    const categoryContainerRef = useRef(null); // Реф для контейнера категорий
+
     const groupedProducts = categories.reduce((acc, category) => {
         acc[category] = products.filter((product) => product.category === category);
         return acc;
@@ -66,10 +68,21 @@ const HomePage = () => {
 
     const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
+    useEffect(() => {
+        if (categoryContainerRef.current && activeCategory) {
+            // Найдем кнопку активной категории
+            const activeCategoryButton = categoryContainerRef.current.querySelector(`.category-button.active`);
+            if (activeCategoryButton) {
+                // Прокручиваем контейнер категорий до активной кнопки
+                activeCategoryButton.scrollIntoView({ behavior: "smooth", inline: "center" });
+            }
+        }
+    }, [activeCategory]);
+
     return (
         <>
             <div className="homepage-centar-container">
-                <div className="category-container">
+                <div className="category-container" ref={categoryContainerRef}>
                     {categories.map((category) => (
                         <Button
                             key={category}
