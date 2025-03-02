@@ -25,7 +25,7 @@ import Tape2 from "../assets/Лента2.jpg";
 import Tape3 from "../assets/Лента3.jpg";
 
 const initialState = {
-    categories: ["Розы", "Календула", "Лилии", "Тюльпаны", "Хризантемы"],
+    categories: ["Розы", "Лилии", "Календула", "Тюльпаны", "Хризантемы"],
     products: [
         { id: 1, name: "Красные розы", category: "Розы", price: 857000, description: "Классический букет", quantity: 10, image: Image1 },
         { id: 2, name: "Белые розы", category: "Розы", price: 798000, description: "Элегантные белые розы", quantity: 5, image: Image2 },
