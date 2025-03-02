@@ -8,8 +8,8 @@ import { ShoppingCartOutlined } from "@ant-design/icons";
 import "../styles/homePageStyles.css";
 
 const HomePage = () => {
-    const [activeCategory, setActiveCategory] = useState(null); // Для отслеживания активной категории при скролле
-    const [clickedCategory, setClickedCategory] = useState(null); // Для отслеживания категории, на которую был клик
+    const [activeCategory, setActiveCategory] = useState(null);
+    const [clickedCategory, setClickedCategory] = useState(null);
 
     const products = useSelector((state) => state.products.products);
     const categories = useSelector((state) => state.products.categories);
@@ -31,26 +31,25 @@ const HomePage = () => {
     }, {});
 
     const scrollToCategory = (category) => {
-        setClickedCategory(category); // Сохраняем кликнутую категорию
-        setActiveCategory(category); // Скроллим к категории
+        setClickedCategory(category);
+        setActiveCategory(category);
         categoryRefs[category].current.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
-    // 🎯 Используем IntersectionObserver для отслеживания видимости секций
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const category = entry.target.dataset.category;
-                        // Обновляем активную категорию при скролле
+
                         setActiveCategory(category);
                     }
                 });
             },
             {
                 root: null,
-                threshold: 0.6, // Считаем категорию активной, если видно 60% её секции
+                threshold: 0.6,
             }
         );
 

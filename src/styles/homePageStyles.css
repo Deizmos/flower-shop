@@ -68,6 +68,11 @@
     color: white;
 }
 
+.category-button:hover{
+    background-color: #ffffff !important;
+    color: black !important;
+    border-color: #d9d9d9 !important;
+}
 .category-button:focus,
 .category-button:active,
 .category-button.active {
@@ -75,13 +80,6 @@
     color: white !important;
     border-color: #d62729 !important;
 }
-
-.category-button:hover{
-    background-color: #ffffff !important;
-    color: black !important;
-    border-color: #d9d9d9 !important;
-}
-
 .carousel-container {
     position: relative;
     width: 100%;
