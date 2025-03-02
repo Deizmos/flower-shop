@@ -70,11 +70,16 @@
 
 .category-button:focus,
 .category-button:active,
-.category-button:hover,
 .category-button.active {
     background-color: #d62729 !important;
     color: white !important;
     border-color: #d62729 !important;
+}
+
+.category-button:hover{
+    background-color: #ffffff !important;
+    color: black !important;
+    border-color: #d9d9d9 !important;
 }
 
 .carousel-container {
