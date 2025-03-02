@@ -69,7 +69,9 @@
 }
 
 .category-button:focus,
-.category-button:active {
+.category-button:active,
+.category-button:hover,
+.category-button.active {
     background-color: #d62729 !important;
     color: white !important;
     border-color: #d62729 !important;
