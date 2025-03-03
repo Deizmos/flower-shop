@@ -70,12 +70,11 @@ const HomePage = () => {
 
     useEffect(() => {
         if (categoryContainerRef.current && activeCategory) {
-            // Найдем кнопку активной категории
             const activeCategoryButton = categoryContainerRef.current.querySelector(`.category-button.active`);
-            if (activeCategoryButton) {
-                // Прокручиваем контейнер категорий до активной кнопки
-                activeCategoryButton.scrollIntoView({ behavior: "smooth", inline: "center" });
-            }
+            // if (activeCategoryButton) {
+            //     // Прокручиваем контейнер категорий до активной кнопки
+            //     activeCategoryButton.scrollIntoView({ behavior: "smooth", inline: "center" });
+            // }
         }
     }, [activeCategory]);
 

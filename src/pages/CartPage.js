@@ -76,11 +76,13 @@ const CartPage = () => {
             <div className="delivery-info">
                 {isDelivery ? (
                     <div className="delivery-component">
-                        <p>Здесь будет информация о доставке...</p>
+                        <p className="delivery-text">Укажите свой номер, что бы мы могли с вами связаться для уточнения адресса доставки.</p>
+                        <input className="delivery-input"  type="text" placeholder="Введите номер телефона"/>
                     </div>
                 ) : (
                     <div className="pickup-component">
-                        <p>Здесь будет информация о самовывозе...</p>
+                        <p className="delivery-text">Укажите свой номер, что бы мы могли с вами связаться для информирования о наших пунктах выдачи.</p>
+                        <input className="delivery-input" type="text" placeholder="Введите номер телефона"/>
                     </div>
                 )}
             </div>
